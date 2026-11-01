@@ -26,7 +26,7 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .label{font-size:.8rem;color:var(--accent)}
 
 /* Kopfzeile */
-header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:20px;padding-bottom:20px;font-size:.85rem}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:4px;font-size:.85rem}
 header nav{display:flex;gap:clamp(14px,3vw,32px)}
 header .brand{display:flex;align-items:center;gap:8px}
 header .brand::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
@@ -34,15 +34,13 @@ nav a{text-decoration:none}
 nav a:hover{color:var(--accent)}
 
 /* Hero */
-.hero{display:flex;justify-content:space-between;align-items:baseline;padding-top:clamp(28px,6vw,72px)}
+.hero{display:flex;justify-content:center;align-items:baseline;gap:clamp(10px,2vw,22px);padding-top:clamp(0px,1vw,12px)}
 .hero h1{font:500 clamp(3.4rem,11vw,8rem)/1 var(--sans);letter-spacing:-.045em}
 .hero .x{font:italic 400 clamp(2.4rem,6vw,4.2rem)/1 var(--serif);color:var(--accent)}
-.tagline{display:grid;grid-template-columns:1fr 2fr 1fr;align-items:center;gap:16px;margin-top:28px;padding:18px 0;border-top:1px solid var(--sand);font-size:.95rem}
-.tagline p{text-align:center}
-.tagline .arrow{text-align:right;color:var(--accent)}
 
 /* Abschnitte */
 section{padding-top:clamp(56px,8vw,96px)}
+#ueber-mich{padding-top:clamp(28px,4vw,48px)}
 .sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:28px}
 .sec-head h2{font:400 clamp(1.7rem,3vw,2.2rem)/1.1 var(--serif);display:flex;gap:14px;align-items:baseline}
 
@@ -78,9 +76,6 @@ footer{margin-top:clamp(56px,8vw,96px);background:var(--sand);padding:36px 0 24p
 @media (max-width:760px){
   .works{grid-template-columns:1fr}
   .about{grid-template-columns:1fr}
-  .tagline{grid-template-columns:1fr auto}
-  .tagline .where{grid-column:1/-1}
-  .tagline p{text-align:left}
   .tracks li{grid-template-columns:1.6rem 1fr auto}
   .tracks .kind{display:none}
 }
@@ -92,9 +87,9 @@ footer{margin-top:clamp(56px,8vw,96px);background:var(--sand);padding:36px 0 24p
   <div class="wrap">
     <span class="brand small">Freie Malerei &amp; Musik</span>
     <nav aria-label="Hauptnavigation">
+      <a href="#ueber-mich">Über mich</a>
       <a href="#werke">Werke</a>
       <a href="#musik">Musik</a>
-      <a href="#ueber-mich">Über mich</a>
       <a href="#kontakt">Kontakt ↗</a>
     </nav>
   </div>
@@ -106,16 +101,26 @@ footer{margin-top:clamp(56px,8vw,96px);background:var(--sand);padding:36px 0 24p
       <h1>Replacer</h1>
       <span class="x" aria-hidden="true">x</span>
     </div>
-    <div class="tagline">
-      <span class="small where">Freie Malerei / Leipzig</span>
-      <p>Ich male, was mir nicht in den Sinn kommt.</p>
-      <span class="arrow" aria-hidden="true">↓</span>
-    </div>
+
+    <!-- ÜBER MICH -->
+    <section id="ueber-mich">
+      <div class="about">
+        <div class="portrait">
+          <!-- Foto einfügen: <img src="bilder/portrait.jpg" alt="Replacer im Atelier"> -->
+          <span class="small">Portrait<br>bilder/portrait.jpg</span>
+        </div>
+        <div>
+          <span class="label">01 / Über mich</span>
+          <h2>Music Producer &amp; Visual Artist</h2>
+          <p class="text">Ich bin Musikproduzent und Maler. Meine Arbeiten konzentrieren sich auf Texturen. Ich arbeite mit Acryl und Öl.</p>
+        </div>
+      </div>
+    </section>
 
     <!-- WERKE -->
     <section id="werke">
       <div class="sec-head">
-        <h2><span class="label">01 /</span> Ausgewählte Werke</h2>
+        <h2><span class="label">02 /</span> Ausgewählte Werke</h2>
         <span class="small">2024 – 2025</span>
       </div>
       <div class="works">
@@ -150,7 +155,7 @@ footer{margin-top:clamp(56px,8vw,96px);background:var(--sand);padding:36px 0 24p
     <!-- MUSIK -->
     <section id="musik">
       <div class="sec-head">
-        <h2><span class="label">02 /</span> Musik</h2>
+        <h2><span class="label">03 /</span> Musik</h2>
         <span class="small">Produktionen</span>
       </div>
       <!-- Titel, Jahr und Links unten anpassen. Platzhalter "#" durch deinen Link ersetzen. -->
@@ -164,20 +169,6 @@ footer{margin-top:clamp(56px,8vw,96px);background:var(--sand);padding:36px 0 24p
       </div>
     </section>
 
-    <!-- ÜBER MICH -->
-    <section id="ueber-mich">
-      <div class="about">
-        <div class="portrait">
-          <!-- Foto einfügen: <img src="bilder/portrait.jpg" alt="Replacer im Atelier"> -->
-          <span class="small">Portrait<br>bilder/portrait.jpg</span>
-        </div>
-        <div>
-          <span class="label">03 / Über mich</span>
-          <h2>Music Producer &amp; Visual Artist</h2>
-          <p class="text">Ich bin Musikproduzent und Maler. Meine Arbeiten konzentrieren sich auf Texturen. Ich arbeite mit Acryl und Öl.</p>
-        </div>
-      </div>
-    </section>
   </div>
 </main>
 
