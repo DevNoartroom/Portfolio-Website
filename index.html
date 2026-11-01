@@ -10,9 +10,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
 /* ===== Farben & Schriften: hier zentral anpassen ===== */
+@font-face{font-family:"Dune Rise";src:url("fonts/DuneRise.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 :root{
-  --bg:#F3F1EA; --sand:#E4E1D6; --ink:#2B2B27; --muted:#6F6C63;
-  --accent:#B84A32; --sage:#7F8A6C; --blush:#D3AE9C; --deep:#3C4038; --light:#F0EDE3;
+  --bg:#080B12; --sand:#161423; --ink:#F4EEE8; --muted:#A8A2B4;
+  --accent:#ED703C; --sage:#7F8A6C; --blush:#D3AE9C; --deep:#3C4038; --light:#F0EDE3;
+  --grad:linear-gradient(90deg,#F0904A 0%,#E8533B 35%,#C2437A 70%,#A04A9C 100%);
+  --display:"Dune Rise","Inter",system-ui,sans-serif;
   --serif:"Instrument Serif",Georgia,serif;
   --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
   --pad:clamp(20px,5vw,64px);
@@ -28,15 +31,15 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 /* Kopfzeile */
 header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:4px;font-size:.85rem}
 header nav{display:flex;gap:clamp(14px,3vw,32px)}
-header .brand{display:flex;align-items:center;gap:8px}
+header .brand{display:flex;align-items:center;gap:10px;font-family:var(--display);letter-spacing:.04em;color:var(--ink)}
 header .brand::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
 nav a{text-decoration:none}
 nav a:hover{color:var(--accent)}
 
 /* Hero */
 .hero{display:flex;justify-content:center;align-items:baseline;gap:clamp(10px,2vw,22px);padding-top:clamp(0px,1vw,12px)}
-.hero h1{font:500 clamp(3.4rem,11vw,8rem)/1 var(--sans);letter-spacing:-.045em}
-.hero .x{font:italic 400 clamp(2.4rem,6vw,4.2rem)/1 var(--serif);color:var(--accent)}
+.hero h1{font:400 clamp(1.9rem,8.4vw,5.6rem)/1.1 var(--display);letter-spacing:.02em;color:var(--accent);background:var(--grad);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero .x{font:italic 400 clamp(1.6rem,4vw,3rem)/1 var(--serif);color:var(--accent)}
 
 /* Abschnitte */
 section{padding-top:clamp(56px,8vw,96px)}
@@ -70,7 +73,7 @@ footer{margin-top:clamp(56px,8vw,96px);background:var(--sand);padding:36px 0 24p
 .contact{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
 .contact a.mail{font:400 clamp(2.4rem,6vw,3.6rem)/1.1 var(--sans);color:var(--accent);text-decoration:none;letter-spacing:-.02em}
 .contact a.mail:hover{text-decoration:underline}
-.legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:32px;padding-top:16px;border-top:1px solid rgba(0,0,0,.08)}
+.legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1)}
 
 /* Mobile */
 @media (max-width:760px){
