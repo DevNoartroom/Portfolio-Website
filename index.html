@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RPLCR – Musik und Malerei</title>
+<title>Replacer – Malerei und Musik (Test Grün)</title>
 <meta name="description" content="Replacer: freie Malerei und Musikproduktion aus Leipzig.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,9 +12,10 @@
 /* ===== Farben & Schriften: hier zentral anpassen ===== */
 @font-face{font-family:"Dune Rise";src:url("fonts/DuneRise.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 :root{
-  --bg:#080B12; --sand:#161423; --ink:#F4EEE8; --muted:#A8A2B4;
-  --accent:#ED703C; --sage:#7F8A6C; --blush:#D3AE9C; --deep:#3C4038; --light:#F0EDE3;
-  --grad:linear-gradient(90deg,#F0904A 0%,#E8533B 35%,#C2437A 70%,#A04A9C 100%);
+  --bg:#C8E150; --sand:#B4CC45; --ink:#040211; --muted:#3E4B10;
+  --accent:#4A5F0C; --sage:#7F8A6C; --blush:#D3AE9C; --deep:#3C4038; --light:#F0EDE3;
+  --olive:#8EA038;
+  --grad:linear-gradient(90deg,#040211 0%,#1D2A06 55%,#4A5F0C 100%);
   --display:"Dune Rise","Inter",system-ui,sans-serif;
   --serif:"Instrument Serif",Georgia,serif;
   --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -73,7 +74,7 @@ footer{margin-top:clamp(56px,8vw,96px);background:var(--sand);padding:36px 0 24p
 .contact{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
 .contact a.mail{font:400 clamp(2.4rem,6vw,3.6rem)/1.1 var(--sans);color:var(--accent);text-decoration:none;letter-spacing:-.02em}
 .contact a.mail:hover{text-decoration:underline}
-.legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:32px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1)}
+.legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:32px;padding-top:16px;border-top:1px solid rgba(200,225,80,.25)}
 
 /* Mobile */
 @media (max-width:760px){
@@ -82,6 +83,13 @@ footer{margin-top:clamp(56px,8vw,96px);background:var(--sand);padding:36px 0 24p
   .tracks li{grid-template-columns:1.6rem 1fr auto}
   .tracks .kind{display:none}
 }
+
+/* Kontaktbereich dunkel, wie im Farbvorbild */
+footer{background:var(--ink);color:var(--bg)}
+footer .label,footer .small{color:var(--olive)}
+.contact a.mail{color:var(--bg)}
+a:focus-visible{outline-color:var(--ink)}
+footer a:focus-visible{outline-color:var(--bg)}
 </style>
 </head>
 <body>
